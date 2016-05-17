@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Windmill Testing Framework</title>
+
+<meta name="description" content="Just a small-town Web testing framework..." />
+<meta name="designer" content="digitalnature.ro" />
+
+
+<link rel="pingback" href="http://www.getwindmill.com/xmlrpc.php" />
+<link rel="shortcut icon" href="http://www.getwindmill.com/wp-content/themes/mystique/favicon.ico" />
+
+<style type="text/css">
+ @import "http://www.getwindmill.com/wp-content/themes/mystique/style.css";
+ @import "http://www.getwindmill.com/?mystique=css";
+</style>
+<!--[if lte IE 6]><link media="screen" rel="stylesheet" href="http://www.getwindmill.com/wp-content/themes/mystique/ie6.css" type="text/css" /><![endif]-->
+<!--[if IE 7]><link media="screen" rel="stylesheet" href="http://www.getwindmill.com/wp-content/themes/mystique/ie7.css" type="text/css" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="Windmill Testing Framework &raquo; Feed" href="http://www.getwindmill.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="Windmill Testing Framework &raquo; Comments Feed" href="http://www.getwindmill.com/comments/feed" />
+<link rel='stylesheet' id='podpress_frontend_styles-css'  href='http://www.getwindmill.com/wp-content/plugins/podpress/podpress.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sociable-front-css-css'  href='http://www.getwindmill.com/wp-content/plugins/sociable/sociable.css?ver=3.0.2' type='text/css' media='all' />
+<script type="text/javascript">
+//<![CDATA[
+var podpressL10 = {
+	openblogagain : 'back to:',
+	theblog : 'the blog',
+	close : 'close'
+}
+//]]>
+</script>
+<script type="text/javascript" src="http://www.getwindmill.com/wp-content/plugins/podpress/players/1pixelout_audio-player.js"></script>
+<script type="text/javascript">//<![CDATA[
+	var podPressPlayerFile = "1pixelout_player.swf";
+	var podPressPopupPlayerOpt = new Object();
+	podPressPopupPlayerOpt["bg"] = "F8F8F8";
+	podPressPopupPlayerOpt["leftbg"] = "EEEEEE";
+	podPressPopupPlayerOpt["text"] = "666666";
+	podPressPopupPlayerOpt["lefticon"] = "666666";
+	podPressPopupPlayerOpt["rightbg"] = "CCCCCC";
+	podPressPopupPlayerOpt["rightbghover"] = "999999";
+	podPressPopupPlayerOpt["righticon"] = "666666";
+	podPressPopupPlayerOpt["righticonhover"] = "FFFFFF";
+	podPressPopupPlayerOpt["slider"] = "666666";
+	podPressPopupPlayerOpt["track"] = "FFFFFF";
+	podPressPopupPlayerOpt["loader"] = "9FFFB8";
+	podPressPopupPlayerOpt["border"] = "666666";
+	podPressPopupPlayerOpt["listen_wrapper"] = "off";
+	podPressPopupPlayerOpt["volslider"] = "666666";
+	podPressPopupPlayerOpt["voltrack"] = "FFFFFF";
+	podPressPopupPlayerOpt["tracker"] = "DDDDDD";
+	podPressPopupPlayerOpt["skip"] = "666666";
+	podPressPopupPlayerOpt["initialvolume"] = "70";
+	podPressPopupPlayerOpt["buffer"] = "5";
+	podPressPopupPlayerOpt["checkpolicy"] = "no";
+	podpressAudioPlayer.setup("http://www.getwindmill.com/wp-content/plugins/podpress/players/" + podPressPlayerFile, {bg:"F8F8F8", leftbg:"EEEEEE", text:"666666", lefticon:"666666", rightbg:"CCCCCC", rightbghover:"999999", righticon:"666666", righticonhover:"FFFFFF", slider:"666666", track:"FFFFFF", loader:"9FFFB8", border:"666666", listen_wrapper:"off", volslider:"666666", voltrack:"FFFFFF", tracker:"DDDDDD", skip:"666666", initialvolume:"70", buffer:"5", checkpolicy:"no",  pagebg:"FFFFFF", transparentpagebg:"yes", encode: "no"} );
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+var podPressBlogURL = "http://www.getwindmill.com/";
+var podPressBackendURL = "http://www.getwindmill.com/wp-content/plugins/podpress/";
+var podPressDefaultPreviewImage = podPressBackendURL+"images/vpreview_center.png";
+var podPressMP3PlayerWrapper = false;
+var podPress_cortado_signed = false;
+var podPressOverwriteTitleandArtist = false;
+var podPressText_PlayNow = "Play Now";
+var podPressText_HidePlayer = "Hide Player";
+//]]></script>
+<script type='text/javascript' src='http://www.getwindmill.com/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://www.getwindmill.com/wp-content/plugins/podpress/podpress.js?ver=3.0.2'></script>
+<script type='text/javascript' src='http://www.getwindmill.com/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.1.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.getwindmill.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.getwindmill.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Windmill Testing Framework' href='http://www.getwindmill.com' />
+<link rel='prev' title='Twitter Feed' href='http://www.getwindmill.com/twitter-feed' />
+<link rel='next' title='Weblog' href='http://www.getwindmill.com/weblog' />
+<meta name="generator" content="WordPress 3.0.2" />
+
+<!-- All in One SEO Pack 1.6.13 by Michael Torbert of Semper Fi Web Design[261,349] -->
+<meta name="description" content="Automated testing for your web site." />
+<meta name="keywords" content="javascript, JavaScript, JS, Python, JQuery, Windmill, Testing, Automation, Web, Internet, continuous, integration, reporting" />
+<link rel="canonical" href="http://www.getwindmill.com/" />
+<!-- /all in one seo pack -->
+
+<link rel="stylesheet" href="http://www.getwindmill.com/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+<!-- Google Analytics Tracking by Google Analyticator 6.1.1: http://ronaldheft.com/code/analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1368002-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+<body class="home single-page page-meet-windmill author-adam level-parent col-2-left fixed browser-unknown">
+ <div id="page">
+
+
+  <div class="page-content header-wrapper">
+
+
+    <div id="header" class="bubbleTrigger">
+    
+                
+
+      <div id="site-title">
+        <h1 id="logo"><a href="http://www.getwindmill.com">Windmill Testing Framework</a></h1>        				<br>
+      </div>
+
+      
+   <div class="shadow-left">
+   <div class="shadow-right clear-block">
+   <p class="nav-extra"><a href="http://twitter.com/windmillproject" class="nav-extra twitter" title="Follow me on Twitter"><span>Follow me on Twitter</span></a><a href="http://www.getwindmill.com/feed" class="nav-extra rss" title="RSS Feeds"><span>RSS Feeds</span></a></p>
+   <ul class="navigation  clear-block">
+          <li class="page page-meet-windmill active"><a class="fadeThis active" href="http://www.getwindmill.com/" title="Meet Windmill"><span class="title">Meet Windmill</span><span class="pointer"></span></a>
+<ul class="level-2">
+<li class="page page-project-information "><a class="fadeThis " href="http://www.getwindmill.com/meet-windmill/project-information" title="Project Information"><span class="title">Project Information</span><span class="pointer"></span></a>
+<ul class="level-3">
+<li class="page page-mailing-lists "><a class="fadeThis " href="http://www.getwindmill.com/meet-windmill/project-information/mailing-lists" title="Mailing Lists"><span class="title">Mailing Lists</span><span class="pointer"></span></a></li>
+<li class="page page-links "><a class="fadeThis " href="http://www.getwindmill.com/meet-windmill/project-information/links" title="Project Links"><span class="title">Project Links</span><span class="pointer"></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="page page-weblog "><a class="fadeThis " href="http://www.getwindmill.com/weblog" title="Weblog"><span class="title">Weblog</span><span class="pointer"></span></a></li>
+<li class="page page-timeline "><a class="fadeThis " href="http://www.getwindmill.com/timeline" title="Timeline"><span class="title">Timeline</span><span class="pointer"></span></a></li>
+<li class="page page-features "><a class="fadeThis " href="http://www.getwindmill.com/features" title="Features"><span class="title">Features</span><span class="pointer"></span></a>
+<ul class="level-2">
+<li class="page page-presentations "><a class="fadeThis " href="http://www.getwindmill.com/features/presentations" title="Presentations"><span class="title">Presentations</span><span class="pointer"></span></a></li>
+<li class="page page-windmill-demo-videos "><a class="fadeThis " href="http://www.getwindmill.com/features/windmill-demo-videos" title="Windmill Demo Videos"><span class="title">Windmill Demo Videos</span><span class="pointer"></span></a></li>
+<li class="page page-windmill-introduction-video "><a class="fadeThis " href="http://www.getwindmill.com/features/windmill-introduction-video" title="Windmill Introduction Video"><span class="title">Windmill Introduction Video</span><span class="pointer"></span></a></li>
+</ul>
+</li>
+<li class="page page-twitter-feed "><a class="fadeThis " href="http://www.getwindmill.com/twitter-feed" title="Twitter Feed"><span class="title">Twitter Feed</span><span class="pointer"></span></a></li>
+<li class="page page-about "><a class="fadeThis " href="http://www.getwindmill.com/about" title="Mission"><span class="title">Mission</span><span class="pointer"></span></a></li>
+   </ul>
+   </div>
+   </div>
+  
+            
+
+    </div>
+
+  </div>
+
+  <!-- left+right bottom shadow -->
+  <div class="shadow-left page-content main-wrapper">
+   <div class="shadow-right">
+
+     
+  <!-- main content: primary + sidebar(s) -->
+  <div id="main">
+   <div id="main-inside" class="clear-block">
+    <!-- primary content -->
+    <div id="primary-content">
+     <div class="blocks">
+              
+  <!-- post -->
+  <div class="hentry page post-1 odd author-adam clear-block">
+
+        <h1 class="title">
+       Meet Windmill     </h1> <p><img style="float: right; margin: 10px;" src="/images/new_logo.png" alt="" /></p>
+<p><strong style="color: orange;">Windmill is a web testing tool designed to let you painlessly automate and debug your web application.<br />
+</strong></p>
+<p>Originating at the Open Source Applications Foundation Windmill was built to help QA keep up with the rapid release cycles of the<a href="http://hub.chandlerproject.org"> Chandler Server Web UI (Cosmo)</a> project. As the Cosmo client is heavy in JavaScript and AJAX functionality, Windmill makes the communication between the service and the client code a priority.</p>
+<div></div>
+<h2>Windmill Test Framework</h2>
+<div style="margin-left:10px;width:450px;">
+<h3>Cross-browser test recorder</h3>
+<p><a href="http://wiki.github.com/windmill/windmill/building-tests">Record, edit, playback</a> and interact with your tests from one simple interface. Also checkout the DOM Explorer, Assertion Explorer and <a href="http://wiki.github.com/windmill/windmill/building-tests">fully integrated Firebug-Lite</a>.</p>
+<h3>Interactive service shell</h3>
+<p>Interact with the browser and the <a href="http://wiki.github.com/windmill/windmill/getting-started">windmill service</a> from a python shell, install ipython and automatically get an even more usable shell.</p>
+<h3>Malleable proxy API</h3>
+<p>Define rules for the Windmill proxy to follow, block those ad services or see what happens if your static content server goes down!</p>
+<h3>JavaScript test integration</h3>
+<p>Run your tests faster, <a href="http://wiki.github.com/windmill/windmill/javascript-tests">write them in JavaScript</a>! Also provides the complete set of JSUnit functions.</p>
+<h3>Windmill Controller</h3>
+<p>Click, type, sleep, assert, pretty much anything you can think of doing to your web page is available as a <a href="http://wiki.github.com/windmill/windmill/controller-api">windmill controller</a> method.
+</div>
+
+  </div>
+  <!-- /post -->
+  
+
+<!-- tabbed content -->
+<div class="tabbed-content post-tabs clear-block" id="post-tabs">
+
+ 
+ <!-- tab sections -->
+ <div class="sections">
+
+  
+  
+
+  
+ </div>
+ <!-- /tab sections -->
+
+</div>
+<!-- /tabbed content -->
+
+             </div>
+    </div>
+    <!-- /primary content -->
+
+    
+<div id="sidebar">
+ <ul class="blocks">
+        <li class="block"><div class="block-widget_text clear-block" id="instance-text-204160571">    <div class="textwidget"><p><b>Download Now!</b><br></p>
+<ul>
+<li><a href="http://wiki.github.com/windmill/windmill/installing">Install Windmill</a>
+<li><a href="http://wiki.github.com/windmill/windmill/installing">Install from Source</a>
+<li><a href="http://wiki.github.com/windmill/windmill/installing"><strong style="color:#068481;"><i>Current Version:</i></strong> <span style="color:orange;">v.1.4</span></a>
+<li><a href="http://github.com/windmill/windmill/tarball/master">Download: <strong style="color:orange;">Master .tar</strong></a>
+</ul>
+<p><b>Windmill in Action</b><br></p>
+<ul>
+<li><a href="http://www.getwindmill.com/features/windmill-introduction-video">Introduction Video</a>
+<li><a href="http://www.getwindmill.com/features/windmill-demo-videos">Demo Videos</a>
+<li><a href="http://www.getwindmill.com/presentations">Presentations</a>
+</ul>
+<p><b>Windmill Project</b><br></p>
+<ul>
+<li><a href="http://www.getwindmill.com/documentation/links">Project Links</a>
+<li><a href="http://wiki.github.com/windmill/windmill/">Windmill Docs</a>
+<li><a href="http://github.com/windmill/windmill">View the Source</a>
+<li><a href="http://www.getwindmill.com/documentation/mailing-lists">Mailing Lists</a></li>
+<li><a href="http://github.com/windmill/windmill/issues">Bug Tracking</a>
+<li><a href="http://www.twitter.com/windmillproject">Windmill on Twitter</a>
+<li><a href="http://freenode.net/">Freenode on IRC</a>, #windmill
+<li><a href="http://wiki.github.com/windmill/windmill/faq">Frequently Asked Questions</a>
+<p><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5894394264706783";
+/* getwindmill */
+google_ad_slot = "4623771607";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script><br />
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+</div>
+    </div></li>     </ul>
+</div>
+
+
+   </div>
+  </div>
+  <!-- /main content -->
+
+
+ 
+ <!-- footer -->
+  <div id="footer">
+
+ 
+    <div class="page-content">
+    <div id="copyright">
+			© 2007-2010 Windmill Testing Framework
+    </div>
+
+   </div>
+  </div>
+  <!-- /footer -->
+
+ </div>
+</div>
+<!-- /shadow -->
+
+    <!-- page controls -->
+  <div id="pageControls"></div>
+  <!-- /page controls -->
+  
+  <!-- 24 queries. 1.855 seconds. -->
+
+ </div>
+</body>
+</html>
+
+
+<!-- Dynamic page generated in 1.813 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-12-23 14:50:21 -->
+<!-- super cache -->

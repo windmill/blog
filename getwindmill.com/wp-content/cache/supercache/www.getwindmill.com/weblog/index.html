@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Weblog | Windmill Testing Framework</title>
+
+<meta name="description" content="Just a small-town Web testing framework..." />
+<meta name="designer" content="digitalnature.ro" />
+
+
+<link rel="pingback" href="http://www.getwindmill.com/xmlrpc.php" />
+<link rel="shortcut icon" href="http://www.getwindmill.com/wp-content/themes/mystique/favicon.ico" />
+
+<style type="text/css">
+ @import "http://www.getwindmill.com/wp-content/themes/mystique/style.css";
+ @import "http://www.getwindmill.com/weblog?mystique=css";
+</style>
+<!--[if lte IE 6]><link media="screen" rel="stylesheet" href="http://www.getwindmill.com/wp-content/themes/mystique/ie6.css" type="text/css" /><![endif]-->
+<!--[if IE 7]><link media="screen" rel="stylesheet" href="http://www.getwindmill.com/wp-content/themes/mystique/ie7.css" type="text/css" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="Windmill Testing Framework &raquo; Feed" href="http://www.getwindmill.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="Windmill Testing Framework &raquo; Comments Feed" href="http://www.getwindmill.com/comments/feed" />
+<link rel='stylesheet' id='podpress_frontend_styles-css'  href='http://www.getwindmill.com/wp-content/plugins/podpress/podpress.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sociable-front-css-css'  href='http://www.getwindmill.com/wp-content/plugins/sociable/sociable.css?ver=3.0.2' type='text/css' media='all' />
+<script type="text/javascript">
+//<![CDATA[
+var podpressL10 = {
+	openblogagain : 'back to:',
+	theblog : 'the blog',
+	close : 'close'
+}
+//]]>
+</script>
+<script type="text/javascript" src="http://www.getwindmill.com/wp-content/plugins/podpress/players/1pixelout_audio-player.js"></script>
+<script type="text/javascript">//<![CDATA[
+	var podPressPlayerFile = "1pixelout_player.swf";
+	var podPressPopupPlayerOpt = new Object();
+	podPressPopupPlayerOpt["bg"] = "F8F8F8";
+	podPressPopupPlayerOpt["leftbg"] = "EEEEEE";
+	podPressPopupPlayerOpt["text"] = "666666";
+	podPressPopupPlayerOpt["lefticon"] = "666666";
+	podPressPopupPlayerOpt["rightbg"] = "CCCCCC";
+	podPressPopupPlayerOpt["rightbghover"] = "999999";
+	podPressPopupPlayerOpt["righticon"] = "666666";
+	podPressPopupPlayerOpt["righticonhover"] = "FFFFFF";
+	podPressPopupPlayerOpt["slider"] = "666666";
+	podPressPopupPlayerOpt["track"] = "FFFFFF";
+	podPressPopupPlayerOpt["loader"] = "9FFFB8";
+	podPressPopupPlayerOpt["border"] = "666666";
+	podPressPopupPlayerOpt["listen_wrapper"] = "off";
+	podPressPopupPlayerOpt["volslider"] = "666666";
+	podPressPopupPlayerOpt["voltrack"] = "FFFFFF";
+	podPressPopupPlayerOpt["tracker"] = "DDDDDD";
+	podPressPopupPlayerOpt["skip"] = "666666";
+	podPressPopupPlayerOpt["initialvolume"] = "70";
+	podPressPopupPlayerOpt["buffer"] = "5";
+	podPressPopupPlayerOpt["checkpolicy"] = "no";
+	podpressAudioPlayer.setup("http://www.getwindmill.com/wp-content/plugins/podpress/players/" + podPressPlayerFile, {bg:"F8F8F8", leftbg:"EEEEEE", text:"666666", lefticon:"666666", rightbg:"CCCCCC", rightbghover:"999999", righticon:"666666", righticonhover:"FFFFFF", slider:"666666", track:"FFFFFF", loader:"9FFFB8", border:"666666", listen_wrapper:"off", volslider:"666666", voltrack:"FFFFFF", tracker:"DDDDDD", skip:"666666", initialvolume:"70", buffer:"5", checkpolicy:"no",  pagebg:"FFFFFF", transparentpagebg:"yes", encode: "no"} );
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+var podPressBlogURL = "http://www.getwindmill.com/";
+var podPressBackendURL = "http://www.getwindmill.com/wp-content/plugins/podpress/";
+var podPressDefaultPreviewImage = podPressBackendURL+"images/vpreview_center.png";
+var podPressMP3PlayerWrapper = false;
+var podPress_cortado_signed = false;
+var podPressOverwriteTitleandArtist = false;
+var podPressText_PlayNow = "Play Now";
+var podPressText_HidePlayer = "Hide Player";
+//]]></script>
+<script type='text/javascript' src='http://www.getwindmill.com/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://www.getwindmill.com/wp-content/plugins/podpress/podpress.js?ver=3.0.2'></script>
+<script type='text/javascript' src='http://www.getwindmill.com/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.1.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.getwindmill.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.getwindmill.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Windmill Testing Framework' href='http://www.getwindmill.com' />
+<meta name="generator" content="WordPress 3.0.2" />
+
+<!-- All in One SEO Pack 1.6.13 by Michael Torbert of Semper Fi Web Design[261,274] -->
+
+<meta name="keywords" content="1.4,pypi,release,thanks,windmill,django,releases,updates,community,windmill talk,conference,open source,progress,work,uncategorized,contrib,couchdb,firefox,javascript,mozilla,python,social,web,node.js,2009" />
+
+<link rel="canonical" href="http://www.getwindmill.com/weblog/" />
+<!-- /all in one seo pack -->
+
+<link rel="stylesheet" href="http://www.getwindmill.com/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+<!-- Google Analytics Tracking by Google Analyticator 6.1.1: http://ronaldheft.com/code/analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1368002-3']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+<body class="blog col-2-left fixed browser-gecko">
+ <div id="page">
+
+
+  <div class="page-content header-wrapper">
+
+
+    <div id="header" class="bubbleTrigger">
+    
+                
+
+      <div id="site-title">
+        <h1 id="logo"><a href="http://www.getwindmill.com">Windmill Testing Framework</a></h1>        				<br>
+      </div>
+
+      
+   <div class="shadow-left">
+   <div class="shadow-right clear-block">
+   <p class="nav-extra"><a href="http://twitter.com/windmillproject" class="nav-extra twitter" title="Follow me on Twitter"><span>Follow me on Twitter</span></a><a href="http://www.getwindmill.com/feed" class="nav-extra rss" title="RSS Feeds"><span>RSS Feeds</span></a></p>
+   <ul class="navigation  clear-block">
+          <li class="page page-meet-windmill "><a class="fadeThis " href="http://www.getwindmill.com/" title="Meet Windmill"><span class="title">Meet Windmill</span><span class="pointer"></span></a>
+<ul class="level-2">
+<li class="page page-project-information "><a class="fadeThis " href="http://www.getwindmill.com/meet-windmill/project-information" title="Project Information"><span class="title">Project Information</span><span class="pointer"></span></a>
+<ul class="level-3">
+<li class="page page-mailing-lists "><a class="fadeThis " href="http://www.getwindmill.com/meet-windmill/project-information/mailing-lists" title="Mailing Lists"><span class="title">Mailing Lists</span><span class="pointer"></span></a></li>
+<li class="page page-links "><a class="fadeThis " href="http://www.getwindmill.com/meet-windmill/project-information/links" title="Project Links"><span class="title">Project Links</span><span class="pointer"></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="page page-weblog active"><a class="fadeThis active" href="http://www.getwindmill.com/weblog" title="Weblog"><span class="title">Weblog</span><span class="pointer"></span></a></li>
+<li class="page page-timeline "><a class="fadeThis " href="http://www.getwindmill.com/timeline" title="Timeline"><span class="title">Timeline</span><span class="pointer"></span></a></li>
+<li class="page page-features "><a class="fadeThis " href="http://www.getwindmill.com/features" title="Features"><span class="title">Features</span><span class="pointer"></span></a>
+<ul class="level-2">
+<li class="page page-presentations "><a class="fadeThis " href="http://www.getwindmill.com/features/presentations" title="Presentations"><span class="title">Presentations</span><span class="pointer"></span></a></li>
+<li class="page page-windmill-demo-videos "><a class="fadeThis " href="http://www.getwindmill.com/features/windmill-demo-videos" title="Windmill Demo Videos"><span class="title">Windmill Demo Videos</span><span class="pointer"></span></a></li>
+<li class="page page-windmill-introduction-video "><a class="fadeThis " href="http://www.getwindmill.com/features/windmill-introduction-video" title="Windmill Introduction Video"><span class="title">Windmill Introduction Video</span><span class="pointer"></span></a></li>
+</ul>
+</li>
+<li class="page page-twitter-feed "><a class="fadeThis " href="http://www.getwindmill.com/twitter-feed" title="Twitter Feed"><span class="title">Twitter Feed</span><span class="pointer"></span></a></li>
+<li class="page page-about "><a class="fadeThis " href="http://www.getwindmill.com/about" title="Mission"><span class="title">Mission</span><span class="pointer"></span></a></li>
+   </ul>
+   </div>
+   </div>
+  
+            
+
+    </div>
+
+  </div>
+
+  <!-- left+right bottom shadow -->
+  <div class="shadow-left page-content main-wrapper">
+   <div class="shadow-right">
+
+     
+  <!-- main content: primary + sidebar(s) -->
+  <div id="main">
+   <div id="main-inside" class="clear-block">
+
+    <!-- primary content -->
+    <div id="primary-content">
+     <div class="blocks">
+            
+  <!-- post -->
+  <div id="post-783" class="hentry post post-1 odd author-adam category-community category-django category-release category-releases category-updates category-windmill category-windmill-talk post_tag-1-4 post_tag-pypi post_tag-release post_tag-thanks post_tag-windmill clear-block">
+
+        <h2 class="title"><a href="http://www.getwindmill.com/archives/783" rel="bookmark" title="Permanent Link: Windmill 1.4 Released">Windmill 1.4 Released</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Nov 10th</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/adam/" title="Posts by adam ">adam</a> in <a href="http://www.getwindmill.com/archives/category/django">Django</a>                  </p>
+            <p class="comments alignright"><a href="http://www.getwindmill.com/archives/783#comments" class="no comments">No comments</a></p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>After a year of moving the project to GitHub, changing jobs, moving to San Francisco and 4 beta releases, Windmill 1.4 is finally up on PYPI.</p>
+<p>You may be asking, what in this release could be so awesome that it took a whole year+.. well the answer is, LOTS.</p>
+<p>The major things that come to mind involve, automatically waiting for actions, dropping your unnecessary failure cases running in CI. We have also had major contributions to the Django integration code, the addition of Google Chrome on three platforms, and insane amounts of bug fixes you should <a href="https://github.com/windmill/windmill/commits/master">checkout here</a>.</p>
+<p>Having delayed an insane amount of time in getting this out, I have to apologize that I haven&#8217;t had a chance to tackle the Win 7 Safari and Chrome issues, but they are next on the list (would love a contributions on this one).</p>
+<p>Another big issue is that right click is still not working properly on IE, I spent an afternoon of Googling and if anyone has ideas on how to fire this correctly in JavaScript &#8212; please let me know.</p>
+<p>I have really enjoyed working with all of you out there in the community, thanks for your continuing participation and the last year of patience!</p>
+<p>Adam</p>
+     </div>
+      
+       <div class="post-tags">
+    <a href="http://www.getwindmill.com/archives/tag/1-4" rel="tag" title="1.4 (1 topics)">1.4</a>, <a href="http://www.getwindmill.com/archives/tag/pypi" rel="tag" title="PyPi (1 topics)">PyPi</a>, <a href="http://www.getwindmill.com/archives/tag/release" rel="tag" title="Release (6 topics)">Release</a>, <a href="http://www.getwindmill.com/archives/tag/thanks" rel="tag" title="thanks (1 topics)">thanks</a>, <a href="http://www.getwindmill.com/archives/tag/windmill" rel="tag" title="Windmill (6 topics)">Windmill</a>    </div>
+    
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-745" class="hentry post post-2 even alt author-adam category-uncategorized post_tag-community post_tag-conference post_tag-open-source-2 post_tag-progress post_tag-release post_tag-windmill post_tag-work-2 clear-block">
+
+        <h2 class="title"><a href="http://www.getwindmill.com/archives/745" rel="bookmark" title="Permanent Link: Thanking our Community!">Thanking our Community!</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Aug 18th</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/adam/" title="Posts by adam ">adam</a> in <a href="http://www.getwindmill.com/archives/category/uncategorized">Uncategorized</a>                  </p>
+            <p class="comments alignright"><a href="http://www.getwindmill.com/archives/745#comments" class="no comments">No comments</a></p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>Since January 1&#8242;st Mikeal, MDE and I have been really busy with new adventures but I wanted to thank our community for stepping up and continuing to improve Windmill.</p>
+<p>The web sites, getwindmill.com and the github project have been continuing to get more and more traffic all the time. With spikes of over 1000 users on getwindmill.com and 381 users in a day on the github project a couple months ago (averaging around 200 users a day I can safely say that Windmill is continuing to grow it&#8217;s user base.</p>
+<p>We haven&#8217;t done a release since Windmill 1.3, and there have been lots of changes to infrastructure, patches and issues fixed so I think in the coming weeks my plan is to package up and release Windmill 1.5. </p>
+<p>There is no game plan carved in stone, but I would like to spend some time sprucing up the IDE theme as it&#8217;s starting to look a bit dated.</p>
+<p>I will be at both CouchCamp and JS EU in Berlin next month, if any Windmill&#8217;ers are attending it would be great to meet up for a beverage.</p>
+<p>Thanks for your patience and persistence everyone!</p>
+<p>Cheers,</p>
+<p>Adam</p>
+     </div>
+      
+       <div class="post-tags">
+    <a href="http://www.getwindmill.com/archives/tag/community" rel="tag" title="community (1 topics)">community</a>, <a href="http://www.getwindmill.com/archives/tag/conference" rel="tag" title="conference (1 topics)">conference</a>, <a href="http://www.getwindmill.com/archives/tag/open-source-2" rel="tag" title="open source (1 topics)">open source</a>, <a href="http://www.getwindmill.com/archives/tag/progress" rel="tag" title="progress (1 topics)">progress</a>, <a href="http://www.getwindmill.com/archives/tag/release" rel="tag" title="Release (6 topics)">Release</a>, <a href="http://www.getwindmill.com/archives/tag/windmill" rel="tag" title="Windmill (6 topics)">Windmill</a>, <a href="http://www.getwindmill.com/archives/tag/work-2" rel="tag" title="work (1 topics)">work</a>    </div>
+    
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-718" class="hentry post post-3 odd author-mikeal category-community category-contrib category-couchdb category-django category-firefox category-javascript category-mozilla category-node-js category-python category-social category-web category-windmill clear-block">
+
+        <h2 class="title"><a href="http://www.mikealrogers.com/archives/778" rel="bookmark" title="Permanent Link: Open Source BBQ, Sunday, June 27th 2010">Open Source BBQ, Sunday, June 27th 2010</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Jun 22nd</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/mikeal/" title="Posts by mikeal ">mikeal</a> in <a href="http://www.getwindmill.com/archives/category/contrib">Contrib</a>                  </p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>Time for another Open Source BBQ!</p>
+<p>All are welcome, contributions appreciated, I&#8217;m gonna start cooking around 3pm and probably close it down when the sun goes down.</p>
+<p>Please RSVP:</p>
+<p><a href="http://www.mobaganda.com/opensourcebbq-june2010">http://www.mobaganda.com/opensourcebbq-june2010</a></p>
+<p>or on Plancast</p>
+<p><a href="http://plancast.com/a/3pt9">http://plancast.com/a/3pt9</a></p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-681" class="hentry post post-4 even alt author-mikeal category-community category-contrib category-couchdb category-django category-firefox category-javascript category-mozilla category-node-js category-python category-social category-windmill clear-block">
+
+        <h2 class="title"><a href="http://www.mikealrogers.com/archives/758" rel="bookmark" title="Permanent Link: Open Source BBQ this Friday 4/9/2010">Open Source BBQ this Friday 4/9/2010</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Apr 6th</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/mikeal/" title="Posts by mikeal ">mikeal</a> in <a href="http://www.getwindmill.com/archives/category/contrib">Contrib</a>                  </p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>That&#8217;s right! Open Source BBQ this Friday 4/9/2010 in Oakland, CA in my backyard at 4pm until it gets dark.</p>
+<p>There will be meat, and stuff that&#8217;s not meat, and beer. Contributions welcome, it&#8217;s open source after all.</p>
+<p>Everyone that writes code is welcome. Please RSVP at <a href="http://www.mobaganda.com/opensourcebbq">http://www.mobaganda.com/opensourcebbq</a>.</p>
+<p>I live walking distance from MacAurthur BART, here is a <a href="http://maps.google.com/maps?f=q&#038;source=s_q&#038;hl=en&#038;geocode=&#038;q=449+Rich+St,+Oakland,+California+94609&#038;sll=37.0625,-95.677068&#038;sspn=53.432436,66.005859&#038;ie=UTF8&#038;hq=&#038;hnear=449+Rich+St,+Oakland,+Alameda,+California+94609&#038;z=17">map</a>. When you get there just walk down the driveway in to the backyard.</p>
+<p>Friday is also &#8220;open friday&#8221; at the couch.io office so you can come and work/play at the office during the day and then roll up to the BBQ around 4 if you like.</p>
+<p><img src="http://greeningwinnett.files.wordpress.com/2009/11/hemi-powered-barbecue-grill.jpg" alt="Badass!" /></p>
+<p>Disclaimer: Image is for effect only, hot rod BBQ will not be attending.</p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-647" class="hentry post post-5 odd author-mikeal category-contrib category-couchdb category-firefox category-javascript category-mozilla category-python category-web category-windmill clear-block">
+
+        <h2 class="title"><a href="http://www.mikealrogers.com/archives/718" rel="bookmark" title="Permanent Link: Moving on">Moving on</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Jan 2nd</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/mikeal/" title="Posts by mikeal ">mikeal</a> in <a href="http://www.getwindmill.com/archives/category/contrib">Contrib</a>                  </p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>The new year is bringing some big changes for me. A few weeks back I accepted a position at Relaxed Inc. and notified Mozilla that I would be leaving at the end of the year.</p>
+<h2>Mozilla</h2>
+<p>I started working at Mozilla 2 years ago. I started the day after my employment at the Open Source Applications Foundation ended. At this point I already took for granted some of the best parts of working at Mozilla; working for a public benefit organization, spending 100% of my time working on Open Source, working with very smart people in the open (lists, IRC, etc.).</p>
+<p>But Mozilla is even more than all that. Succeeding at Mozilla means something more than a pat on the back and a good end of the year review. When you succeed at Mozilla you impact one of the most important products on the internet. You reach hundreds of millions of users and contribute to keeping the web an open and free (as in speech) world. There is no other place in the world you can work where you can conceivably have this kind of impact.</p>
+<p>Mozilla as an organization is truly unique. Last year was the hardest I&#8217;ve ever had, i suffered a huge loss in my personal life and Mozilla was as supportive during this time as any of my friends or family. There are a lot of places that let you put so much of yourself in to the organization to help it attain it&#8217;s goals but there are only a handful that are there to support you when you need it.</p>
+<h2>Relaxed Inc.</h2>
+<p>I started using CouchDB in 2008 after a great talk by <a href="http://jan.prima.de/">Jan Lehnardt</a> at OSCON. I started using it right away and over the next year it re-shaped how I think about web development and applications. In the last 6 months my group at Mozilla has become a heavy CouchDB user and not just because of my own interest but because CouchDB was the only solution for some of the harder problems we needed to solve with our results storage.</p>
+<p>As I&#8217;ve used CouchDB more and more and become a part of the CouchDB community I&#8217;ve had the pleasure of knowing some of the core contributors, three of which have decided to found a new startup around CouchDB; <a href="http://jan.prima.de/">Jan Lehnardt</a>, <a href="http://jchrisa.net">J Chris Anderson</a>, and the creator of CouchDB <a href="http://damienkatz.net/">Damien Katz</a>. Shorty after they received their funding they made an offer. It&#8217;s an amazing opportunity and while the decision to leave Mozilla is one of the hardest I&#8217;ve ever had to make I&#8217;m very excited about my future at Relaxed.</p>
+<h2>The Future</h2>
+<p>I&#8217;m really looking forward to working with everyone at Relaxed. It&#8217;s an exciting time and I&#8217;m not 100% sure yet which projects I currently work on that I will still have time to maintain. In the next week or so I&#8217;ll be doing a blog post on all the libraries I currently work on and maintain (it&#8217;s a <strong>long</strong> list) and what their status is moving forward. I still maintain code I wrote long before I worked at Mozilla and have every intention of continuing to work on some of the projects I started at Mozilla.</p>
+<p>One thing is certain. I&#8217;m not the guy who figures out how to test the browser any more. Windmill and Mozmill are important projects that I have every intention of supporting by making time for code reviews and community support but I won&#8217;t be available to put time in to new feature work and refactoring like I have in the past. Luckily there are solid communities behind both of these projects and I&#8217;m confident that there are people who can continue to drive them in the future.</p>
+<p>I don&#8217;t know what is going to happen next, all I know is that it should be fun, it won&#8217;t be like anything I&#8217;ve done before, and will certainly continue to include lots JavaScript and Python.</p>
+<p>For everyone who depends on me and the code I&#8217;ve written over the last few years I&#8217;ll be sure to keep you all up to date. And one thing I can promise is that if you want to fix anything in one my projects, fork it on github and send me a pull request and I will always find time to look at it <img src='http://www.mikealrogers.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />  </p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-612" class="hentry post post-6 even alt author-adam category-2009 category-releases clear-block">
+
+        <h2 class="title"><a href="http://www.getwindmill.com/archives/612" rel="bookmark" title="Permanent Link: Windmill 1.3 Released">Windmill 1.3 Released</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Oct 2nd</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/adam/" title="Posts by adam ">adam</a> in <a href="http://www.getwindmill.com/archives/category/2009">2009</a>                  </p>
+            <p class="comments alignright"><a href="http://www.getwindmill.com/archives/612#comments" class="no comments">No comments</a></p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>Windmill 1.3 is the final release before we make some pretty major changes including: auto-waiting, improving running speed, proxy speed, and the addition of full flash integration.</p>
+<p>If you rely at all on the speed that Windmill runs tests, then this is your last guaranteed change free release.</p>
+<p>However, we have done a lot of work to make this a great release:</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li> JQuery Selector Support</li>
+<li>Stability updates for Windows</li>
+<li>Moving all the deps into the Windmill tree, for easier installation</li>
+<li>Show controller method, for hi-lighting the DOM in your tests</li>
+<li>Improving the logic for JS Test reinjection between page loads</li>
+<li>Visual improvements</li>
+<li>Controller method for manually overriding dialogs</li>
+<li>Updating Firebug for Firefox 3.5 support</li>
+</ul>
+<p><strong>Bugs</strong>:</p>
+<ul>
+<li>Assertions and waits no longer scroll the page</li>
+<li>Fixing bugs with loading user extensions</li>
+<li>Wait for page load no longer fails tests, as your following action will do that if needed</li>
+<li>Increasing Firefox script timeout for large typing scripts</li>
+<li>Running Windmill on Windows Vista</li>
+<li>AssertText issues</li>
+<li>Rich Text Editor support</li>
+</ul>
+<p>And many more!</p>
+<p>As always come talk to us if you have issues in #windmill on freenode.</p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-597" class="hentry post post-7 odd author-adam category-uncategorized clear-block">
+
+        <h2 class="title"><a href="http://www.getwindmill.com/archives/597" rel="bookmark" title="Permanent Link: Windmill 1.3 Beta Testing">Windmill 1.3 Beta Testing</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Sep 11th</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/adam/" title="Posts by adam ">adam</a> in <a href="http://www.getwindmill.com/archives/category/uncategorized">Uncategorized</a>                  </p>
+            <p class="comments alignright"><a href="http://www.getwindmill.com/archives/597#comments" class="no comments">No comments</a></p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>We have an sdist tarball up here: http://getwindmill.com/sdist/windmill-1.3beta1.tar.gz</p>
+<p>This has the jquery locator functionality, plenty of bug fixes, but most importantly &#8212; this will be the last release before a bunch of new features go in. If your tests rely on the speed that the current code base runs python tests (ie. the time between actions etc) then you will want to run this release. </p>
+<p><strong>Upcoming</strong>: </p>
+<p> &#8211; flash testing work<br />
+- automatic waiting on UI actions<br />
+- new proxy work<br />
+- dramatic speed improvements</p>
+<p>Please help us test!</p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-567" class="hentry post post-8 even alt author-mikeal category-community category-contrib category-couchdb category-firefox category-mozilla category-python category-windmill clear-block">
+
+        <h2 class="title"><a href="http://www.mikealrogers.com/archives/622" rel="bookmark" title="Permanent Link: Up for a Pint?">Up for a Pint?</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Jul 2nd</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/mikeal/" title="Posts by mikeal ">mikeal</a> in <a href="http://www.getwindmill.com/archives/category/contrib">Contrib</a>                  </p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>I&#8217;m in London for the next few days and would love to grab a drink with any community members be you Mozilla, CouchDB, Python, Windmill, JavaScript or just plain old coffee, whisky or beer geeks <img src='http://www.mikealrogers.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-566" class="hentry post post-9 odd author-mikeal category-contrib category-couchdb category-python category-windmill clear-block">
+
+        <h2 class="title"><a href="http://www.mikealrogers.com/archives/617" rel="bookmark" title="Permanent Link: Heading to EuroPython">Heading to EuroPython</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Jun 26th</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/mikeal/" title="Posts by mikeal ">mikeal</a> in <a href="http://www.getwindmill.com/archives/category/contrib">Contrib</a>                  </p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>I&#8217;m getting all packed up and leaving Sunday for [EuroPython](http://www.europython.eu/) in Birmingham, UK.</p>
+<p>This will be my first time at EuroPython and my first time in Europe!</p>
+<p>I&#8217;ll be giving two talks, one on [Windmill](http://www.getwindmill.com) and one about [CouchDB](http://couchdb.apache.org/) and Python. The Windmill talk will be more or less the talk that I gave at [Open Source Bridge](http://opensourcebridge.org/) last week, which went very well. This is the first time I&#8217;ll be talking about CouchDB, the most exciting new technology on the web. The talk will mostly be about breaking our old data modeling habits that we developed to deal with SQL and what libraries and tools are available for interacting with CouchDB in Python.</p>
+<p>I will also be in London for a few extra days after the conference so anyone interested in a meetup should ping me.</p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+  <!-- post -->
+  <div id="post-565" class="hentry post post-10 even alt author-mikeal category-community category-contrib category-firefox category-javascript category-python category-windmill clear-block">
+
+        <h2 class="title"><a href="http://www.mikealrogers.com/archives/613" rel="bookmark" title="Permanent Link: Conference Season Begins">Conference Season Begins</a></h2>
+   
+        <div class="post-date">
+       <p class="day">Jun 15th</p>
+     </div>
+
+     <div class="post-info clear-block ">
+      <p class="author alignleft">Posted by <a href="http://www.getwindmill.com/archives/author/mikeal/" title="Posts by mikeal ">mikeal</a> in <a href="http://www.getwindmill.com/archives/category/contrib">Contrib</a>                  </p>
+           </div>
+    
+        <div class="post-content clear-block">
+      <p>I&#8217;ll be leaving tomorrow morning for [Open Source Bridge](http://opensourcebridge.org/) in Portland, Oregon.</p>
+<p>I&#8217;m putting together a new [Windmill talk](http://opensourcebridge.org/sessions/36) that tries to incorporate all the feedback we&#8217;ve received over the last year of speaking which I&#8217;ll be presenting on Thursday.</p>
+<p>Mozilla is also a [sponsoring](http://opensourcebridge.org/sponsors/) the conference and there is going to be some great [Firefox related sprints in the hacker lounge](http://opensourcebridge.org/wiki/Hacker_Lounge). Dietrich is also giving what sounds like an awesome talk on extending Firefox called [Firefox Switchblade](http://opensourcebridge.org/sessions/251).</p>
+<p>Hope to see you all there!</p>
+<p>PS. I&#8217;ll also be at EuroPython and the Community Leadership Summit, more on those later <img src='http://www.mikealrogers.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+     </div>
+      
+   
+
+  </div>
+  <!-- /post -->
+ 
+      <!-- page navigation -->
+      <div class="page-navigation  clear-block">
+
+      <span class="current">1</span><a href="http://www.getwindmill.com/weblog/page/2" title="Go to page 2">2</a><a href="http://www.getwindmill.com/weblog/page/3" title="Go to page 3">3</a><a href="http://www.getwindmill.com/weblog/page/4" title="Go to page 4">4</a><a href="http://www.getwindmill.com/weblog/page/5" title="Go to page 5">5</a><a href="http://www.getwindmill.com/weblog/page/2" >&raquo;</a><span class="extend">...</span><a href="http://www.getwindmill.com/weblog/page/6" class="last" title="Go to the last page">Last &raquo;</a>
+      </div>
+      <!-- /page navigation -->
+                </div>
+    </div>
+    <!-- /primary content -->
+
+    
+<div id="sidebar">
+ <ul class="blocks">
+        <li class="block"><div class="block-widget_text clear-block" id="instance-text-204160571">    <div class="textwidget"><p><b>Download Now!</b><br></p>
+<ul>
+<li><a href="http://wiki.github.com/windmill/windmill/installing">Install Windmill</a>
+<li><a href="http://wiki.github.com/windmill/windmill/installing">Install from Source</a>
+<li><a href="http://wiki.github.com/windmill/windmill/installing"><strong style="color:#068481;"><i>Current Version:</i></strong> <span style="color:orange;">v.1.4</span></a>
+<li><a href="http://github.com/windmill/windmill/tarball/master">Download: <strong style="color:orange;">Master .tar</strong></a>
+</ul>
+<p><b>Windmill in Action</b><br></p>
+<ul>
+<li><a href="http://www.getwindmill.com/features/windmill-introduction-video">Introduction Video</a>
+<li><a href="http://www.getwindmill.com/features/windmill-demo-videos">Demo Videos</a>
+<li><a href="http://www.getwindmill.com/presentations">Presentations</a>
+</ul>
+<p><b>Windmill Project</b><br></p>
+<ul>
+<li><a href="http://www.getwindmill.com/documentation/links">Project Links</a>
+<li><a href="http://wiki.github.com/windmill/windmill/">Windmill Docs</a>
+<li><a href="http://github.com/windmill/windmill">View the Source</a>
+<li><a href="http://www.getwindmill.com/documentation/mailing-lists">Mailing Lists</a></li>
+<li><a href="http://github.com/windmill/windmill/issues">Bug Tracking</a>
+<li><a href="http://www.twitter.com/windmillproject">Windmill on Twitter</a>
+<li><a href="http://freenode.net/">Freenode on IRC</a>, #windmill
+<li><a href="http://wiki.github.com/windmill/windmill/faq">Frequently Asked Questions</a>
+<p><script type="text/javascript"><!--
+google_ad_client = "ca-pub-5894394264706783";
+/* getwindmill */
+google_ad_slot = "4623771607";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script><br />
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+</div>
+    </div></li>     </ul>
+</div>
+
+
+   </div>
+  </div>
+  <!-- /main content -->
+
+
+ 
+ <!-- footer -->
+  <div id="footer">
+
+ 
+    <div class="page-content">
+    <div id="copyright">
+			© 2007-2010 Windmill Testing Framework
+    </div>
+
+   </div>
+  </div>
+  <!-- /footer -->
+
+ </div>
+</div>
+<!-- /shadow -->
+
+    <!-- page controls -->
+  <div id="pageControls"></div>
+  <!-- /page controls -->
+  
+  <!-- 53 queries. 0.838 seconds. -->
+
+ </div>
+</body>
+</html>
+
+
+<!-- Dynamic page generated in 0.821 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-12-23 15:09:21 -->
+<!-- super cache -->
